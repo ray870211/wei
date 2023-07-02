@@ -1,8 +1,9 @@
 import '@/assets/scss/main.scss';
+import routes from 'virtual:generated-pages';
 import { createApp } from 'vue';
-import App from './App.vue';
 import { createRouter, createWebHistory } from 'vue-router';
-import routes from 'virtual:generated-pages'
+
+import App from './App.vue';
 
 const router = createRouter({
     history: createWebHistory(),

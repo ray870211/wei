@@ -23,8 +23,6 @@
       "#/server": ["./src/server/composiables/."],
       "#/server/*": ["./src/server/composiables/*"]
     },
-    "types": ["@intlify/unplugin-vue-i18n/messages"]
   },
   "include": ["env.d.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -5,7 +5,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint:script": "eslint './{src,modules}/**/*.{js,ts,vue}' --max-warnings=0",
+    "lint:script:fix": "pnpm lint:script --fix",
+    "lint:style": "stylelint './src/**/*.{vue,scss}' --ignore-path .gitignore",
+    "lint:style:fix": "lint:style --fix",
+    "lint": "pnpm lint:script && pnpm lint:style"
   },
   "dependencies": {
     "sass": "^1.63.6",
@@ -24,6 +29,10 @@
     "eslint-plugin-vue": "^9.10.0",
     "eslint-plugin-vuejs-accessibility": "^2.1.0",
     "eslint-plugin-yml": "^1.5.0",
+    "stylelint": "^15.7.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "stylelint-order": "^6.0.3",
     "postcss": "^8.4.21",
     "postcss-html": "^1.5.0",
     "postcss-scss": "^4.0.6",
