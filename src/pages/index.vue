@@ -1,16 +1,22 @@
-<template>
-  <div>
-    <h1>Welcome to My App!</h1>
-    <p>This is the home page.</p>
-  </div>
-</template>
+<script setup lang="ts">
+import { ref, watch } from 'vue';
 
-<script>
-export default {
-  name: 'HomePage',
-};
+import Header from '@/components/organisms/Header.vue';
+const msgRef = ref('Hello, Vue 3!');
+setTimeout(() => {
+  msgRef.value = 'Hello, Vue 3 + TypeScript!';
+}, 3000);
+
+// const isVue3 = computed(() => {
+//   if (msgRef.value === 'Hello, Vue 3 + TypeScript!') return msgRef.value;
+// });
+
+watch(msgRef, () => {
+  // alert('msgRef changed');
+});
+const titleRef = 'abcv';
 </script>
 
-<style>
-/* 你可以在这里添加样式 */
-</style>
+<template>
+  <Header :title="titleRef" />
+</template>
